@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">BeliKopi</string>
+
+    <string name="Order_Now">Order Now</string>
+    <string name="harga">Harga</string>
+    <string name="jumlah">jumlah</string>
+    <string name="waffle">Waffle</string>
+    <string name="whats">Whats your name</string>
+    <string name="addtopping">Add Topping</string>
+    <string name="krim">Cream</string>
+    <string name="choco">Chocolatos</string>
+    <string name="O">O</string>
+    <string name="nol">O</string>
+
 </resources>

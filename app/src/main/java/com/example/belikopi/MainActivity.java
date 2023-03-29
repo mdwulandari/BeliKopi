@@ -3,9 +3,7 @@ package com.example.belikopi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
@@ -15,10 +13,6 @@ import android.widget.Toast;
 
 import java.text.NumberFormat;
 
-import static android.R.string.no;
-import static android.os.Build.VERSION_CODES.N;
-
-
 public class MainActivity extends AppCompatActivity {
 
     int quantity=0;
@@ -26,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
+    }
 
     public void increment(View view){//perintah tombol tambah
         if(quantity==100){
@@ -60,33 +54,39 @@ public class MainActivity extends AppCompatActivity {
         boolean haschocolate=chocolateChekBox.isChecked();//mengidentifikasi check
         Log.v("MainActivity","has whippedcream:"+haschocolate);
 
-        int price=calculateprice(haswhippedcream,haschocolate);//memanggil method jumlah harga
-        String pricemessage=createOrderSummary(price,name,haswhippedcream,haschocolate);
+        CheckBox wafflesChekBox= (CheckBox) findViewById(R.id.Waffles_checkbox);
+        boolean haswaffles=wafflesChekBox.isChecked();//mengidentifikasi check
+        Log.v("MainActivity","has waffles:"+haswaffles);
 
+        int price=calculateprice(haswhippedcream,haschocolate,haswaffles);//memanggil method jumlah harga
+        String pricemessage=createOrderSummary(price,name,haswhippedcream,haschocolate,haswaffles);
 
         displayMessage(pricemessage);
-
     }
-    private int calculateprice(boolean addwhipedcream,boolean addchocolate){//jumlah pesanan * harga
+    private int calculateprice(boolean addwhipedcream,boolean addchocolate,boolean addwaffles){//jumlah pesanan * harga
         int harga=5000;
 
         if(addwhipedcream){
             harga=harga+1000;//harga tambahan toping
         }
 
-        if (addchocolate){
+        if(addchocolate){
             harga=harga+2000;
         }
 
+        if(addwaffles){
+            harga=harga+3000;
+        }
         return quantity * harga;
     }
-    private String createOrderSummary(int price, String name, boolean addChocolate, boolean addWhippedCream) {//hasil pemesanan
-        String pricemessage=" Nama = "+name;
-        pricemessage+="\n Tambahkan Coklat =" +addWhippedCream;
-        pricemessage+="\n Tambahkan Krim =" +addChocolate;
-        pricemessage+="\n Jumlah Pemesanan =" +quantity;
-        pricemessage+="\n Total = Rp " +price;
-        pricemessage+="\n Terimakasih";
+    private String createOrderSummary(int price, String name, boolean addChocolate, boolean addWhippedCream, boolean addWaffles) {//hasil pemesanan
+        String pricemessage=" Name : "+name;
+        pricemessage+="\n Add Cream         : " +addWhippedCream;
+        pricemessage+="\n Add Chocolatos : " +addChocolate;
+        pricemessage+="\n Add Waffle     : " +addWaffles;
+        pricemessage+="\n Total Order     : " +quantity;
+        pricemessage+="\n Grand Total    : Rp " +price;
+        pricemessage+="\n Have a Nice Day !";
         return  pricemessage;
     }
 

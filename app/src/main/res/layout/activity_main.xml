@@ -12,28 +12,37 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Masukan nama anda ...."
+            android:hint="@string/whats"
             android:id="@+id/edt_name"
             android:inputType="text"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tambahkan Topping"
+            android:text="@string/addtopping"
             android:textSize="25dp"/>
         <CheckBox
             android:id="@+id/WhippedCream_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Krim"
+            android:text="@string/krim"
             android:paddingLeft="16dp"
-            android:textSize="15sp"/>
+            android:textSize="15dp"/>
         <CheckBox
             android:id="@+id/Chocolate_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Coklat"
+            android:text="@string/choco"
             android:paddingLeft="16dp"
-            android:textSize="15sp"/>
+            android:textSize="15dp"/>
+
+        <CheckBox
+            android:id="@+id/Waffles_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/waffle"
+            android:paddingStart="16dp"
+            android:paddingEnd="1dp"
+            android:textSize="15dp"/>
 
         <View
             android:layout_marginTop="10dp"
@@ -41,12 +50,10 @@
             android:layout_height="2dp"
             android:background="@color/colorAccent"/>
 
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="jumlah"
+            android:text="@string/jumlah"
             android:textSize="25dp"
             android:textAllCaps="true"
             android:layout_marginBottom="16dp"
@@ -54,6 +61,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,18 +70,17 @@
                 android:layout_width="48dp"
                 android:onClick="increment"
                 android:text="+"
-
                 android:layout_height="48dp" />
             <TextView
                 android:textColor="#212121"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@string/nol"
                 android:paddingRight="8dp"
                 android:paddingLeft="8dp"
                 android:id="@+id/quantity_textview"
-                android:textSize="25dp"/>
+                android:textSize="25sp"/>
             <Button
                 android:layout_width="48dp"
                 android:onClick="decrement"
@@ -90,23 +97,23 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Harga"
-            android:textSize="30dp"
+            android:text="@string/harga"
+            android:textSize="30sp"
             android:textAllCaps="true"
             android:layout_marginBottom="16dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/O"
             android:textColor="#212121"
             android:id="@+id/price_textview"
-            android:textSize="25dp"/>
+            android:textSize="25sp"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_marginBottom="16dp"
             android:onClick="Submitorder"
             android:layout_height="wrap_content"
-            android:text="Pesan Sekarang"/>
+            android:text="@string/Order_Now" />
 
 
     </LinearLayout>
