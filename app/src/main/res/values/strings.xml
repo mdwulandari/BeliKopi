@@ -11,5 +11,11 @@
     <string name="choco">Chocolatos</string>
     <string name="O">O</string>
     <string name="nol">O</string>
+    <string name="addcoffe">Add Coffee</string>
+    <string name="kopisusu">Kopi Susu</string>
+    <string name="cappucino">Cappucino</string>
+    <string name="nescafe">Nescafe</string>
+    <string name="creamylatte">Creamy Latte</string>
+    <string name="espresso">Espresso</string>
 
 </resources>

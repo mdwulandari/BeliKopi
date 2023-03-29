@@ -15,6 +15,53 @@
             android:hint="@string/whats"
             android:id="@+id/edt_name"
             android:inputType="text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addcoffe"
+            android:textSize="25dp"/>
+
+        <CheckBox
+            android:id="@+id/KopiSusu_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kopisusu"
+            android:paddingLeft="16dp"
+            android:textSize="15dp"/>
+
+        <CheckBox
+            android:id="@+id/Cappucino_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cappucino"
+            android:paddingLeft="16dp"
+            android:textSize="15dp"/>
+
+        <CheckBox
+            android:id="@+id/Nescafe_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nescafe"
+            android:paddingLeft="16dp"
+            android:textSize="15dp"/>
+
+        <CheckBox
+            android:id="@+id/CreamyLatte_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/creamylatte"
+            android:paddingLeft="16dp"
+            android:textSize="15dp"/>
+
+        <CheckBox
+            android:id="@+id/Espresso_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/espresso"
+            android:paddingLeft="16dp"
+            android:textSize="15dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,6 +74,7 @@
             android:text="@string/krim"
             android:paddingLeft="16dp"
             android:textSize="15dp"/>
+
         <CheckBox
             android:id="@+id/Chocolate_checkbox"
             android:layout_width="wrap_content"
